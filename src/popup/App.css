@@ -82,7 +82,11 @@ body {
   width: 180px;
   border-right: 1px solid var(--border-color);
   overflow-y: auto;
+  overflow-x: hidden;
   background: var(--bg-secondary);
+  max-height: 100%;
+  scrollbar-width: thin;
+  scrollbar-color: var(--border-color) transparent;
 }
 
 .section-detail {
@@ -140,9 +144,18 @@ body {
   color: #fecaca;
 }
 
+/* Portfolio List */
+.portfolio-list {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
 /* Stock List */
 .stock-list {
   padding: 8px;
+  flex: 1;
+  overflow-y: auto;
 }
 
 /* Stock Card */

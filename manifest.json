@@ -1,0 +1,34 @@
+{
+  "manifest_version": 3,
+  "name": "Mini Stock Portfolio",
+  "version": "1.0.0",
+  "description": "日本株・米国株のポートフォリオ管理 - リアルタイム株価とニュース表示",
+  "action": {
+    "default_popup": "src/popup/index.html",
+    "default_icon": {
+      "16": "public/icons/icon16.png",
+      "48": "public/icons/icon48.png",
+      "128": "public/icons/icon128.png"
+    },
+    "default_title": "Mini Stock Portfolio"
+  },
+  "icons": {
+    "16": "public/icons/icon16.png",
+    "48": "public/icons/icon48.png",
+    "128": "public/icons/icon128.png"
+  },
+  "background": {
+    "service_worker": "src/background/service-worker.ts",
+    "type": "module"
+  },
+  "permissions": [
+    "storage",
+    "alarms"
+  ],
+  "host_permissions": [
+    "https://query1.finance.yahoo.com/*",
+    "https://query2.finance.yahoo.com/*",
+    "https://finance.yahoo.com/*",
+    "https://news.google.com/*"
+  ]
+}
